@@ -23,7 +23,7 @@ for (let i = 0; i < engineerData.length; i++) {
         <h2>${engineerData[i].engineer_name}</h2>
         <p>ID: ${engineerData[i].engineer_id}</p>
         <p>Email Address: ${engineerData[i].engineer_email}</p>
-        <a href="github.com/${engineerData[i].engineer_github}">Github: ${engineerData[i].engineer_github}</a>
+        <a href="https://github.com/${engineerData[i].engineer_github}">Github: ${engineerData[i].engineer_github}</a>
     </div>`
     formattedEngineer.push(cardDiv);
 }
@@ -33,7 +33,7 @@ for (let i = 0; i < internData.length; i++) {
     cardDiv = `<div class="card">
         <h2>${internData[i].intern_name}</h2>
         <p>ID: ${internData[i].intern_id}</p>
-        <p>Email Address: ${internData[i].intern_email}</p>
+        <p>Email Address: <a href="mailto: ${internData[i].intern_email}">${internData[i].intern_email}</a></p>
         <p>School: ${internData[i].intern_school}</p>
     </div>`
     formattedIntern.push(cardDiv);
@@ -46,6 +46,7 @@ return `
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/style.css">
     <title>Programming Team</title>
 </head>
 <body>
